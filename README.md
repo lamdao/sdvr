@@ -35,6 +35,7 @@ SDVR has a simple GUI controlled mostly by hotkeys:
     x       -- Toggle bounding box
 
 Some special functions must be activated by mouse:
+
     - Rotate view freely by hold down left mouse button and move
     - Zoom in/out with mouse wheel
 
