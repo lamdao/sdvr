@@ -9,12 +9,10 @@
 
 This is a just-for-fun (JFF) project to demonstrate a Direct Volume Rendering
 algorithm using CPU with SSE enabled. It also has a fairly complex rendering
-engine using MS Windows multi-thread API. This project can be used to
-study/test Volume Rendering algorithm and multi-thread tasks scheduling...
-
-This is just a sample project to illustrate the algorithms (rendering and
-task scheduling in CPU). A real-time direct volume rendering using GPU will
-be posted in another project.
+engine using MS Windows multi-thread API. This project can be used for study
+or test Volume Rendering algorithm and multi-thread tasks scheduling. A true
+real-time Direct Volume Rendering engine using GPU will be posted in another
+project that has more advances in visualization and simulation.
 
 ### Usage
 
@@ -41,7 +39,7 @@ Some special functions must be activated by mouse:
 
 ### Build
 
-This project can be compiled using Visual Studio 13 or above. It also has
+This project can be compiled using Visual Studio 13 or higher. It also has
 Makefile for cross compiling with mingw32/64 in Linux system (tested on
 Fedora 22 with ming64-gcc 5.1.0). The Makefile can be modified easily to
 use with MinGW on M$ Windows as well.
