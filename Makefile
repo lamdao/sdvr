@@ -8,7 +8,7 @@ CXXFLAGS=-I$(SDIR) $(WIN32PP) $(OPTS) $(CSTD)
 
 SRCS=$(SDIR)/box.cpp $(SDIR)/main.cpp $(SDIR)/Picture.cpp $(SDIR)/View.cpp $(SDIR)/VolumeRender.cpp
 OBJS=box.o main.o Picture.o View.o VolumeRender.o Resource.o
-LIBS=-lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -luuid -lcomctl32
+LIBS=-lkernel32 -luser32 -lgdi32 -lwinspool -lcomdlg32 -ladvapi32 -lshell32 -luuid -lcomctl32 -static -lgcc
 MSYS=-mwindows
 
 TARGET=sdvr.exe
@@ -19,7 +19,7 @@ TARGET=sdvr.exe
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CXX) $(MSYS) -o $@ $(OBJS) $(LIBS)
+	$(CXX) $(MSYS) -s -o $@ $(OBJS) $(LIBS)
 
 clean:
 	rm -f *.o
