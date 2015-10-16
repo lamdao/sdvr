@@ -8,11 +8,14 @@
 ### Descriptions
 
 This is a just-for-fun (JFF) project to demonstrate a Direct Volume Rendering
-algorithm using CPU with SSE enabled. It also has a fairly complex rendering
-engine using MS Windows multi-thread API. This project can be used for study
-or test Volume Rendering algorithm and multi-thread tasks scheduling. A true
-real-time Direct Volume Rendering engine using GPU will be posted in another
-project that has more advances in visualization and simulation.
+algorithm using CPU with SSE enabled. This pure Win32 application (no OpenGL
+and/or DirectX needed) has a fairly complex rendering engine using MS Windows
+multi-thread API. It also introduces a simple algorithm to draw bounding box
+after rendering, and a simple trackball algorithm for natural volume rotation.
+This project can be used for study or test Volume Rendering algorithm and
+multi-thread tasks scheduling. A true real-time Direct Volume Rendering engine
+using GPU will be posted in another project that has more advances in
+visualization and simulation.
 
 ### Usage
 
