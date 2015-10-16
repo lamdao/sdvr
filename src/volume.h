@@ -28,8 +28,11 @@ private:
 		if (!s || !*s)
 			return 0;
 		std::string fn(s);
-		strtok((char *)fn.c_str(), ".");
-		W1 = (W = get_dimension()) - 1;
+		char *p = strrchr(s = (char *)fn.c_str(), '.');
+		if (!p || strcasecmp(p+1, "raw") != 0) return 0;
+		*p = 0; p = strrchr(s, '.');
+ 		if (!p) return 0;
+		W1 = (W = get_dimension(p+1)) - 1;
 		H1 = (H = get_dimension()) - 1;
 		D1 = (D = get_dimension()) - 1;
 		return (WxH = W * H) * D;
