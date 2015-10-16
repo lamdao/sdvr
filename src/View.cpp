@@ -1,6 +1,15 @@
 //---------------------------------------------------------------------------
 // View.cpp
 //---------------------------------------------------------------------------
+// Author: Lam H. Dao <daohailam(at)yahoo(dot)com>
+//---------------------------------------------------------------------------
+//
+//  This program is free software; you can redistribute it and/or modify
+//  it under the terms of the GNU General Public License as published by
+//  the Free Software Foundation; either version 3 of the License, or
+//  (at your option) any later version.
+//
+//---------------------------------------------------------------------------
 #undef _WIN32_WINNT
 #define _WIN32_WINNT	0x0601
 #include "View.h"
@@ -119,6 +128,8 @@ void CView::OnFileOpen()
 		Invalidate(FALSE);
 }
 //---------------------------------------------------------------------------
+// Simple Trackball algorithm
+//---------------------------------------------------------------------------
 void CView::OnMouseMove(int x, int y)
 {
 	if (!tracker.button)
@@ -200,11 +211,9 @@ LRESULT CView::WndProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_LBUTTONUP:
 	case WM_RBUTTONUP:
 		tracker.button = 0;
-		//dirty = true;
 		Invalidate(FALSE);
 		break;
 	case WM_MOUSEWHEEL:
-		//printf("mw=%d\n", (int)(wParam >> 8));
 		SetRenderOptions((int)wParam > 0 ? '+' : '-');
 		Invalidate(FALSE);
 		break;
